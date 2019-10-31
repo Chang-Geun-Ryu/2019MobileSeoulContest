@@ -115,7 +115,7 @@ extension UserRecordsVC: UITableViewDataSource {
     if indexPath.row % 2 == 0 {
       let cell = tableView.dequeue(RecordCell.self)
       
-      if let finish = climbingList[indexPath.row].finish {
+      if let finish = climbingList[self.climbingList.count - indexPath.row - 1].finish {
       
         cell.setupCell(date: getDate(climbingList[indexPath.row].start),
                        level: .high,
